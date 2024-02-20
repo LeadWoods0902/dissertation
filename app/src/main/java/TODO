@@ -1,0 +1,34 @@
+Update deprecated fragment
+
+Session Manager:
+Join or Host
+Dialogs for both
+Room has a name and password (4-digit and optional)
+
+Join session
+- fun login(){true}
+
+Host Session
+- fun createRoom(){true}
+
+
+
+Turn tracker:
+if host, show UI for adding a something to the tracker
+
+if not, show current turn (emphasised and overlapping below recycler)
+
+tapping on a card opens dialog -> "view sheet", "highlight in AR", "close"
+holding on a card triggers either sheet or AR depending on settings
+
+tapping on the status
+
+Fixed height for cards
+
+
+Library:
+UI for Sorting and Filtering
+
+
+Settings:
+add hold = sheet/AR

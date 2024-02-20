@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/TurnTracker_Fragment"
+        android:icon="@drawable/list_alt_24px"
+        android:title="@string/title_turn_tracker" />
+    <item
+        android:id="@+id/Library_Fragment"
+        android:icon="@drawable/library_books_24px"
+        android:title="@string/title_library" />
+    <item
+        android:id="@+id/AR_Fragment"
+        android:icon="@drawable/view_in_ar_24px"
+        android:title="@string/title_ar" />
+
+    <item
+        android:id="@+id/PlayerOverview_Fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/person_24px"
+        android:title="@string/fragment_player_overview" />
+    <item
+        android:id="@+id/Settings_Fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/settings_24px"
+        android:title="@string/settingsfragment" />
+
+</menu>

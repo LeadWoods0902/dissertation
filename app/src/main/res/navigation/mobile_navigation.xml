@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/AR_Fragment">
+
+    <fragment
+        android:id="@+id/AR_Fragment"
+        android:name="com.leadwoods.dissertation.ui.ar_view.ARFragment"
+        android:label="@string/title_ar"
+        tools:layout="@layout/fragment_ar" >
+        <action
+            android:id="@+id/action_navigation_ar_viewer_to_navigation_turn_tracker"
+            app:destination="@id/TurnTracker_Fragment" />
+        <action
+            android:id="@+id/action_navigation_ar_viewer_to_character_sheet"
+            app:destination="@id/Character_Sheet_Fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/TurnTracker_Fragment"
+        android:name="com.leadwoods.dissertation.ui.turn_tracker.TurnTrackerFragment"
+        android:label="@string/title_turn_tracker"
+        tools:layout="@layout/fragment_turn_tracker" >
+        <action
+            android:id="@+id/action_navigation_turn_tracker_to_character_sheet"
+            app:destination="@id/Character_Sheet_Fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Library_Fragment"
+        android:name="com.leadwoods.dissertation.ui.library.LibraryFragment"
+        android:label="@string/title_library"
+        tools:layout="@layout/fragment_library" >
+        <action
+            android:id="@+id/action_navigation_library_to_character_sheet"
+            app:destination="@id/Character_Sheet_Fragment" />
+        <action
+            android:id="@+id/action_navigation_library_to_markdown_viewer"
+            app:destination="@id/Text_Asset_Fragment" />
+        <action
+            android:id="@+id/action_navigation_library_to_image_viewer"
+            app:destination="@id/Image_Asset_Fragment" />
+        <action
+            android:id="@+id/action_Library_Fragment_to_PlayerOverview_Fragment"
+            app:destination="@id/PlayerOverview_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/Settings_Fragment"
+        android:name="com.leadwoods.dissertation.ui.settings.SettingsFragment"
+        android:label="@string/settingsfragment" />
+    <fragment android:id="@+id/Character_Sheet_Fragment" >
+        <action
+            android:id="@+id/action_character_sheet_pop"
+            app:popUpTo="@id/Character_Sheet_Fragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <action android:id="@+id/action_global_settingsFragment" app:destination="@id/Settings_Fragment" />
+    <action android:id="@+id/action_global_navigation_ar_viewer" app:destination="@id/AR_Fragment" />
+    <action android:id="@+id/action_global_navigation_library" app:destination="@id/Library_Fragment" />
+    <action android:id="@+id/action_global_navigation_turn_tracker" app:destination="@id/TurnTracker_Fragment" />
+    <fragment android:id="@+id/Text_Asset_Fragment" />
+    <fragment android:id="@+id/Image_Asset_Fragment" />
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.leadwoods.dissertation.MainActivity"
+        android:label="MainActivity" />
+    <fragment
+        android:id="@+id/PlayerOverview_Fragment"
+        android:name="com.leadwoods.dissertation.ui.player_overview.PlayerOverviewFragment"
+        android:label="@string/fragment_player_overview"
+        tools:layout="@layout/fragment_player_overview" /><action android:id="@+id/action_global_PlayerOverview_Fragment" app:destination="@id/PlayerOverview_Fragment"/>
+    <activity
+        android:id="@+id/sessionManager"
+        android:name="com.leadwoods.dissertation.SessionManager"
+        android:label="activity_session_manager"
+        tools:layout="@layout/activity_session_manager" />
+    <fragment
+        android:id="@+id/feed_Fragment"
+        android:name="com.leadwoods.dissertation.Feed_Fragment"
+        android:label="fragment_feed"
+        tools:layout="@layout/fragment_feed" >
+        <action
+            android:id="@+id/action_feed_Fragment_to_Character_Sheet_Fragment"
+            app:destination="@id/Character_Sheet_Fragment" />
+        <action
+            android:id="@+id/action_feed_Fragment_to_Text_Asset_Fragment"
+            app:destination="@id/Text_Asset_Fragment" />
+    </fragment>
+    <action android:id="@+id/action_global_feed_Fragment" app:destination="@id/feed_Fragment" />
+</navigation>
