@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/AR_Fragment"
-        android:name="com.leadwoods.dissertation.ui.ar_view.ARFragment"
+        android:name="com.leadwoods.dissertation.fragments.ar_view.ARFragment"
         android:label="@string/title_ar"
         tools:layout="@layout/fragment_ar" >
         <action
@@ -20,7 +20,7 @@
 
     <fragment
         android:id="@+id/TurnTracker_Fragment"
-        android:name="com.leadwoods.dissertation.ui.turn_tracker.TurnTrackerFragment"
+        android:name="com.leadwoods.dissertation.fragments.turn_tracker.TurnTrackerFragment"
         android:label="@string/title_turn_tracker"
         tools:layout="@layout/fragment_turn_tracker" >
         <action
@@ -30,7 +30,7 @@
 
     <fragment
         android:id="@+id/Library_Fragment"
-        android:name="com.leadwoods.dissertation.ui.library.LibraryFragment"
+        android:name="com.leadwoods.dissertation.fragments.library.LibraryFragment"
         android:label="@string/title_library"
         tools:layout="@layout/fragment_library" >
         <action
@@ -48,7 +48,7 @@
     </fragment>
     <fragment
         android:id="@+id/Settings_Fragment"
-        android:name="com.leadwoods.dissertation.ui.settings.SettingsFragment"
+        android:name="com.leadwoods.dissertation.fragments.settings.SettingsFragment"
         android:label="@string/settingsfragment" />
     <fragment android:id="@+id/Character_Sheet_Fragment" >
         <action
@@ -64,21 +64,21 @@
     <fragment android:id="@+id/Image_Asset_Fragment" />
     <activity
         android:id="@+id/mainActivity"
-        android:name="com.leadwoods.dissertation.MainActivity"
+        android:name="com.leadwoods.dissertation.activities.main_switcher.MainActivity"
         android:label="MainActivity" />
     <fragment
         android:id="@+id/PlayerOverview_Fragment"
-        android:name="com.leadwoods.dissertation.ui.player_overview.PlayerOverviewFragment"
+        android:name="com.leadwoods.dissertation.fragments.player_overview.PlayerOverviewFragment"
         android:label="@string/fragment_player_overview"
         tools:layout="@layout/fragment_player_overview" /><action android:id="@+id/action_global_PlayerOverview_Fragment" app:destination="@id/PlayerOverview_Fragment"/>
     <activity
         android:id="@+id/sessionManager"
-        android:name="com.leadwoods.dissertation.SessionManager"
+        android:name="com.leadwoods.dissertation.activities.session_manager.SessionManager"
         android:label="activity_session_manager"
         tools:layout="@layout/activity_session_manager" />
     <fragment
         android:id="@+id/feed_Fragment"
-        android:name="com.leadwoods.dissertation.Feed_Fragment"
+        android:name="com.leadwoods.dissertation.fragments.feed.FeedFragment"
         android:label="fragment_feed"
         tools:layout="@layout/fragment_feed" >
         <action
@@ -89,4 +89,9 @@
             app:destination="@id/Text_Asset_Fragment" />
     </fragment>
     <action android:id="@+id/action_global_feed_Fragment" app:destination="@id/feed_Fragment" />
+    <fragment
+        android:id="@+id/LobbyControls_Fragment"
+        android:name="com.leadwoods.dissertation.fragments.lobby_controls.LobbyControlsFragment"
+        android:label="fragment_lobby_controls_"
+        tools:layout="@layout/fragment_lobby_controls_" /><action android:id="@+id/action_global_LobbyControls_Fragment" app:destination="@id/LobbyControls_Fragment"/>
 </navigation>

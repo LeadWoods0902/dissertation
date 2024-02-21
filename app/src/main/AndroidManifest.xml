@@ -20,11 +20,11 @@
         <meta-data android:name="com.google.ar.core" android:value="optional" />
 
         <activity
-            android:name=".SessionManager"
+            android:name=".activities.main_switcher.MainActivity"
             android:exported="false" />
 
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.session_manager.SessionManager"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

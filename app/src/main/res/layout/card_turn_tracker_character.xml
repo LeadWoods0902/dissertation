@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
 
     <androidx.cardview.widget.CardView
@@ -60,7 +61,7 @@
                 tools:text="99" />
 
             <LinearLayout
-                android:id="@+id/linearLayout"
+                android:id="@+id/LL_CharacterTrackables"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -69,21 +70,21 @@
                 app:layout_constraintTop_toBottomOf="@+id/TV_CharacterName">
 
                 <ProgressBar
-                    android:id="@+id/progressBar"
+                    android:id="@+id/PB_CharacterTrackable_A"
                     style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:progressTint="#FF0000" />
 
                 <ProgressBar
-                    android:id="@+id/progressBar2"
+                    android:id="@+id/PB_CharacterTrackable_B"
                     style="?android:attr/progressBarStyleHorizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:progressTint="#00FF00" />
 
                 <ProgressBar
-                    android:id="@+id/progressBar3"
+                    android:id="@+id/PB_CharacterTrackable_C"
                     style="?android:attr/progressBarStyleHorizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -114,7 +115,7 @@
                 app:layout_constraintEnd_toStartOf="@+id/guideline_75"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+                app:layout_constraintTop_toBottomOf="@+id/LL_CharacterTrackables" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

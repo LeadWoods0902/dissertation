@@ -4,19 +4,128 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.turn_tracker.TurnTrackerFragment">
+    tools:context=".fragments.turn_tracker.TurnTrackerFragment">
 
-    <TextView
-        android:id="@+id/text_dashboard"
+
+    <FrameLayout
+        android:id="@+id/FL_CurrentTurn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+    </FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RV_UpcomingTurns"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/LL_TurnTrackerControls"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FL_CurrentTurn" />
+
+    <LinearLayout
+        android:id="@+id/LL_TurnTrackerControls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/IB_PreviousTurn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/skip_previous_24px" />
+
+        <ImageButton
+            android:id="@+id/IB_NextTurn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/skip_next_24px" />
+
+        <ImageButton
+            android:id="@+id/IB_SkipRound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/fast_forward_24px" />
+
+        <ImageButton
+            android:id="@+id/IB_AddTurn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/menu_open_24px" />
+    </LinearLayout>
+
+    <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/FAB_AddTurn"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="8dp"-->
+<!--        android:clickable="true"-->
+<!--        android:contentDescription="@string/add_turn_to_tracker"-->
+<!--        android:src="@android:drawable/ic_input_add"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/FAB_SkipRound"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/FAB_SkipRound"-->
+<!--        app:maxImageSize="36dp" />-->
+
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/FAB_NextTurn"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginEnd="16dp"-->
+<!--        android:layout_marginBottom="16dp"-->
+<!--        android:clickable="true"-->
+<!--        android:contentDescription="@string/next_turn"-->
+<!--        android:src="@drawable/skip_next_24px"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:maxImageSize="36dp" />-->
+
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/FAB_PreviousTurn"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginEnd="8dp"-->
+<!--        android:clickable="true"-->
+<!--        android:contentDescription="@string/previous_turn"-->
+<!--        android:src="@drawable/skip_previous_24px"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/FAB_NextTurn"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/FAB_NextTurn"-->
+<!--        app:maxImageSize="36dp" />-->
+
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/FAB_SkipRound"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="8dp"-->
+<!--        android:clickable="true"-->
+<!--        android:contentDescription="@string/next_round"-->
+<!--        android:src="@drawable/fast_forward_24px"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/FAB_NextTurn"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/FAB_NextTurn"-->
+<!--        app:maxImageSize="36dp" />-->
+
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/FAB_ToggleControls"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:layout_marginBottom="16dp"-->
+<!--        android:clickable="true"-->
+<!--        android:contentDescription="@string/hide_controls"-->
+<!--        android:src="@drawable/visibility_off_24px"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,35 @@
+Host Device:
+    Wi-Fi P2P Setup:
+        announce its presence via Wi-Fi P2P service discovery
+        Handle Wi-Fi P2P connection events, such as connection establishment and disconnection.
+
+    Database Monitoring:
+        Implement a mechanism (e.g., background service, LiveData observer) to monitor changes in the Room database.
+        Upon detecting database changes, prepare and format the data to be distributed to client devices.
+
+    Data Distribution:
+        When new data is available for distribution, broadcast a Wi-Fi P2P message or signal to connected client devices.
+        Include necessary information in the broadcast (e.g., data payload, timestamp) to facilitate data synchronization on client devices.
+
+Client Device:
+    Wi-Fi P2P Setup:
+        Discover and establish a connection with the host device using Wi-Fi P2P.
+        Handle Wi-Fi P2P connection events, such as connection establishment and disconnection.
+
+    Broadcast Reception:
+        Implement a mechanism (e.g., broadcast receiver, service) to listen for Wi-Fi P2P broadcasts from the host device.
+        Upon receiving a broadcast indicating new data availability, initiate data synchronization with the host device.
+
+    Data Synchronization:
+        Establish a communication channel with the host device for data exchange (e.g., socket connection).
+        Receive and process the distributed data payload from the host device.
+        Update the local Room database with the received data to synchronize with the host.
+
+    Error Handling and Recovery:
+        Implement error handling mechanisms to handle communication failures or network issues gracefully.
+        Include retry logic and error recovery strategies to ensure robustness and reliability of the data synchronization process.
+
+
+Host Device:
+1. Register a broadcast listener
+2. Request a scan

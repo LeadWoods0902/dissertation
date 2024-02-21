@@ -24,4 +24,13 @@
     <string name="highlight_character_in_augmented_reality_viewer">Highlight Character in Augmented Reality Viewer</string>
     <string name="settingsfragment">Settings</string>
     <string name="fragment_player_overview">You</string>
+    <string name="add_turn_to_tracker">Add Turn to Tracker</string>
+    <string name="next_turn">Next Turn</string>
+    <string name="previous_turn">Previous Turn</string>
+    <string name="next_round">Next Round</string>
+    <string name="hide_controls">Hide Controls</string>
+
+    <string name="room_players_format">%1\$d/%2\$d</string>
+    <string name="room_code">Enter Room Code</string>
+    <string name="room_name">Room Name</string>
 </resources>
